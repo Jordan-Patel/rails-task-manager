@@ -1,9 +1,11 @@
-<h1>My Tasks</h1>
+<div class="container">
+  <h1>My Tasks</h1>
 
-<ul>
-  <% @tasks.each do |task| %>
-  <li>Completed: <%= task.completed %> <%= link_to task.title, task_path(task) %></li>
-  <% end %>
-</ul>
+  <ul>
+    <% @tasks.each do |task| %>
+    <li>Completed: <%= task.completed %> <%= link_to task.title, task_path(task) %></li>
+    <% end %>
+  </ul>
 
-<%= link_to 'New Task', tasks_new_path %>
+  <%= link_to 'New Task', tasks_new_path %>
+</div>
